@@ -1,71 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Roblox Scripter Portfolio</title>
-    <style>
-        body {
-            font-family: Arial;
-            background: #0f0f0f;
-            color: white;
-            margin: 0;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Scripter Portfolio</title>
 
-        .container {
-            padding: 50px;
-        }
+<style>
+/* ====== GLOBAL ====== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f19;
+    color: white;
+    scroll-behavior: smooth;
+}
 
-        h1 {
-            color: #00ffcc;
-        }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-        .card {
-            background: #1c1c1c;
-            margin: 20px auto;
-            padding: 20px;
-            width: 70%;
-            border-radius: 10px;
-        }
+/* ====== NAV ====== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #0f1629;
+    position: sticky;
+    top: 0;
+}
 
-        .tag {
-            display: inline-block;
-            background: #333;
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 5px;
-        }
-    </style>
+nav h2 {
+    color: #00ffd5;
+    margin: 0;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #aaa;
+}
+
+nav a:hover {
+    color: #00ffd5;
+}
+
+/* ====== HERO ====== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    color: #00ffd5;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #00ffd5;
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* ====== SECTIONS ====== */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    color: #00ffd5;
+}
+
+/* ====== CARDS ====== */
+.card {
+    background: #111a2e;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 1px solid #1f2a44;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffd5;
+}
+
+/* ====== TAGS ====== */
+.tag {
+    display: inline-block;
+    background: #1f2a44;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
-
-    <h1>Roblox Scripter Portfolio</h1>
-    <p>I build Roblox game systems like shops, currencies, and abilities.</p>
-
-    <div class="card">
-        <h2>🪙 Currency System</h2>
-        <p>Leaderstats + coin system + server handling</p>
-        <span class="tag">Lua</span>
-        <span class="tag">Server Scripts</span>
+<nav>
+    <h2>Dev Portfolio</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Roblox Scripter</h1>
+    <p>I build game systems like currencies, shops, and abilities.</p>
+    <a class="btn" href="#projects">View Projects</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a Roblox scripter focused on building clean and functional game systems.
+        I enjoy creating gameplay mechanics and backend systems using Lua.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
 
     <div class="card">
-        <h2>🏪 Shop System</h2>
-        <p>Buy upgrades using in-game currency with UI</p>
-        <span class="tag">UI</span>
+        <span class="tag">Lua Scripting</span>
+        <span class="tag">Game Systems</span>
+        <span class="tag">UI Scripting</span>
         <span class="tag">RemoteEvents</span>
+        <span class="tag">DataStore (basic)</span>
+        <span class="tag">Vector3 / CFrame (learning)</span>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>🪙 Currency System</h3>
+        <p>Server-sided coin system with leaderboard integration.</p>
+        <span class="tag">Server Scripts</span>
+        <span class="tag">Leaderstats</span>
     </div>
 
     <div class="card">
-        <h2>⚡ Ability System</h2>
-        <p>Fireball / dash mechanics using Vector3 and CFrame</p>
+        <h3>🏪 Shop System</h3>
+        <p>Players can buy upgrades using in-game currency.</p>
+        <span class="tag">UI</span>
+        <span class="tag">Game Logic</span>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Ability System</h3>
+        <p>Fireball / dash mechanics using Vector3 and CFrame movement.</p>
         <span class="tag">Gameplay</span>
         <span class="tag">Physics</span>
     </div>
+</section>
 
-</div>
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+
+    <div class="card">
+        <p>Discord: yourname#0000</p>
+        <p>Roblox: your profile link</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Roblox Scripter Portfolio
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        target.scrollIntoView({ behavior: "smooth" });
+    });
+});
+</script>
 
 </body>
 </html>
