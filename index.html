@@ -1,12 +1,14 @@
 <section id="projects">
     <h2>Projects</h2>
 
-    <!-- PROJECT 1 -->
+    <!-- BUTTON 1 -->
     <div class="card">
-        <button class="project-btn" onclick="toggle('p1')">🪙 Currency System</button>
+        <button class="project-btn" onclick="toggle('currency')">
+            🪙 Currency System
+        </button>
 
-        <div id="p1" class="project-content">
-            <p>Basic server-sided coin system using leaderstats.</p>
+        <div id="currency" class="project-content">
+            <p>Basic leaderstats coin system (server-sided).</p>
 
             <pre><code>
 game.Players.PlayerAdded:Connect(function(player)
@@ -23,12 +25,14 @@ end)
         </div>
     </div>
 
-    <!-- PROJECT 2 -->
+    <!-- BUTTON 2 -->
     <div class="card">
-        <button class="project-btn" onclick="toggle('p2')">🏪 Shop System</button>
+        <button class="project-btn" onclick="toggle('shop')">
+            🏪 Shop System
+        </button>
 
-        <div id="p2" class="project-content">
-            <p>Simple purchase system using RemoteEvents.</p>
+        <div id="shop" class="project-content">
+            <p>Players can buy items using coins.</p>
 
             <pre><code>
 local price = 100
@@ -38,25 +42,24 @@ script.Parent.MouseButton1Click:Connect(function(player)
 
     if coins.Value >= price then
         coins.Value -= price
-        print("Item purchased!")
     end
 end)
             </code></pre>
         </div>
     </div>
 
-    <!-- PROJECT 3 -->
+    <!-- BUTTON 3 -->
     <div class="card">
-        <button class="project-btn" onclick="toggle('p3')">⚡ Ability System</button>
+        <button class="project-btn" onclick="toggle('ability')">
+            ⚡ Ability System
+        </button>
 
-        <div id="p3" class="project-content">
-            <p>Basic fireball projectile system.</p>
+        <div id="ability" class="project-content">
+            <p>Simple fireball movement using velocity.</p>
 
             <pre><code>
 local fireball = script.Parent
-local direction = fireball.CFrame.LookVector
-
-fireball.Velocity = direction * 60
+fireball.Velocity = fireball.CFrame.LookVector * 60
             </code></pre>
         </div>
     </div>
