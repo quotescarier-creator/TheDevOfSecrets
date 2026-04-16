@@ -1,28 +1,37 @@
 .project-btn {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background: #00ffd5;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 10px;
+    font-size: 16px;
+    transition: 0.2s;
 }
 
 .project-btn:hover {
     background: #00c2a3;
+    transform: scale(1.02);
 }
 
 .project-content {
     display: none;
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: left;
+    animation: fadeIn 0.3s ease;
 }
 
 pre {
     background: #0b0f19;
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
     overflow-x: auto;
     border: 1px solid #1f2a44;
+    color: #00ffcc;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
