@@ -1,16 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Dev Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0f1c;
+    color: white;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #0f172a;
+    position: sticky;
+    top: 0;
+}
+
+nav h2 {
+    color: #00ffd5;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00ffd5;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    color: #00ffd5;
+}
+
+.hero p {
+    color: #aaa;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 18px;
+    background: #00ffd5;
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    color: #00ffd5;
+}
+
+/* CARDS */
+.card {
+    background: #111a2e;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 1px solid #1f2a44;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #00ffd5;
+}
+
+/* PROJECT BUTTON */
+.project-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00ffd5;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.project-content {
+    display: none;
+    margin-top: 10px;
+}
+
+pre {
+    background: #0a0f1c;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid #1f2a44;
+    color: #00ffcc;
+}
+
+/* TAGS */
+.tag {
+    display: inline-block;
+    background: #1f2a44;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Dev Portfolio</h2>
+    <div>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Roblox Scripter</h1>
+    <p>I build game systems like shops, currencies, and mechanics.</p>
+    <a class="btn" href="#projects">See Projects</a>
+</div>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="card">
+        <span class="tag">Lua Scripting</span>
+        <span class="tag">UI Systems</span>
+        <span class="tag">RemoteEvents</span>
+        <span class="tag">Leaderstats</span>
+        <span class="tag">Basic DataStore</span>
+    </div>
+</section>
+
 <section id="projects">
     <h2>Projects</h2>
 
-    <!-- BUTTON 1 -->
     <div class="card">
-        <button class="project-btn" onclick="toggle('currency')">
-            🪙 Currency System
-        </button>
-
-        <div id="currency" class="project-content">
-            <p>Basic leaderstats coin system (server-sided).</p>
-
-            <pre><code>
+        <button class="project-btn" onclick="toggle('p1')">🪙 Currency System</button>
+        <div id="p1" class="project-content">
+<pre><code>
 game.Players.PlayerAdded:Connect(function(player)
     local stats = Instance.new("Folder")
     stats.Name = "leaderstats"
@@ -21,20 +179,14 @@ game.Players.PlayerAdded:Connect(function(player)
     coins.Value = 0
     coins.Parent = stats
 end)
-            </code></pre>
+</code></pre>
         </div>
     </div>
 
-    <!-- BUTTON 2 -->
     <div class="card">
-        <button class="project-btn" onclick="toggle('shop')">
-            🏪 Shop System
-        </button>
-
-        <div id="shop" class="project-content">
-            <p>Players can buy items using coins.</p>
-
-            <pre><code>
+        <button class="project-btn" onclick="toggle('p2')">🏪 Shop System</button>
+        <div id="p2" class="project-content">
+<pre><code>
 local price = 100
 
 script.Parent.MouseButton1Click:Connect(function(player)
@@ -44,24 +196,30 @@ script.Parent.MouseButton1Click:Connect(function(player)
         coins.Value -= price
     end
 end)
-            </code></pre>
-        </div>
-    </div>
-
-    <!-- BUTTON 3 -->
-    <div class="card">
-        <button class="project-btn" onclick="toggle('ability')">
-            ⚡ Ability System
-        </button>
-
-        <div id="ability" class="project-content">
-            <p>Simple fireball movement using velocity.</p>
-
-            <pre><code>
-local fireball = script.Parent
-fireball.Velocity = fireball.CFrame.LookVector * 60
-            </code></pre>
+</code></pre>
         </div>
     </div>
 
 </section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <p><strong>Discord:</strong> thesigma_58684</p>
+        <p><strong>Roblox:</strong> TheDevOfSecret</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Roblox Developer Portfolio
+</footer>
+
+<script>
+function toggle(id) {
+    var el = document.getElementById(id);
+    el.style.display = (el.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
